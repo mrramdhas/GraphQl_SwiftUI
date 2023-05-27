@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import SpaceXAPI
+import Apollo
 
 struct ContentView: View {
+    
+    @StateObject private var rocketVM = RocketList_VM()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            List(rocketVM.rockets, id: \.id) { rocket in
+                Text(rocket.name).bold()
+                Text(rocket.description)
+            }
+            .onAppear {
+                rocketVM.getRocketList()
+            }
         }
         .padding()
     }

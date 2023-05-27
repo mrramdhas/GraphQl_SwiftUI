@@ -1,0 +1,11 @@
+query Rockets {
+    rockets {
+        cost_per_launch
+        country
+        description
+        first_flight
+        id
+        name
+        wikipedia
+    }
+}
