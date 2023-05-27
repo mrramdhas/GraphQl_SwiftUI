@@ -1,4 +1,4 @@
 # GraphQl_SwiftUI
-Integrating spaceX api
+Integrated spaceX api
 
-Practicing graphql using ApolloClient in SwiftUI
+Demo project: GraphQL using ApolloClient in SwiftUI
